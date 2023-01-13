@@ -9,6 +9,15 @@ const container = document.querySelector('.container');
 
 createGrid();
 
+// eraser button
+const eraserBtn = document.querySelector('#eraserBtn');
+eraserBtn.addEventListener('click', (e) => {
+    if (rainbowBtn.classList.contains('active')) {
+        rainbowBtn.classList.remove('active');
+    }
+    eraserBtn.classList.toggle('active');
+})
+
 // new size button
 const newSizeBtn = document.querySelector('#newSizeBtn');
 newSizeBtn.addEventListener('click', (e)=> {
@@ -32,6 +41,9 @@ clearBtn.addEventListener('click', (e) => {
 // rainbow button functions
 const rainbowBtn = document.querySelector('#rainbowBtn')
 rainbowBtn.addEventListener('click', (e) => {
+    if (eraserBtn.classList.contains('active')) {
+        eraserBtn.classList.remove('active');
+    }
     rainbowBtn.classList.toggle('active');
 })
 
@@ -43,6 +55,9 @@ function setBoxListeners(){
         if (rainbowBtn.classList.contains('active')) {
             let randomColor = Math.floor(Math.random()*16777215).toString(16);
             box.style.backgroundColor = `#${randomColor}`
+        }
+        else if (eraserBtn.classList.contains('active')) {
+            box.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--box-background');
         }
         else {
             box.style.backgroundColor = `black`
