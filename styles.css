@@ -1,19 +1,97 @@
+:root {
+    --box-color: black;
+    --background-color: linear-gradient(140deg, rgba(255,0,0,1) 0%, rgba(9,121,108,1) 49%, rgba(255,0,82,1) 100%);;
+    --text-color: white;
+}
+
 body {
     display: flex;
     flex-direction: column;
     height: 100vh;
     margin: 0;
     padding: 0;
+    background: var(--background-color);
+    color: var(--text-color);
 }
-.container {
-    flex: 1;
+
+.header {
     display: flex;
-    margin: 150px;
-    max-height: 500px;
-    max-width: 500px;
+    font-size: 25px;
+    font-weight: 700px;
+    justify-content: center;
+    background-color: #640005;
+    padding: 15px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.options {
+    display: flex;
+    gap: 15px;
+    margin: 20px;
+}
+
+.button {
+    background-color: #48d0e2; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+#rainbowBtn {
+    background: linear-gradient(90deg, #03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 300%;
+}
+
+#rainbowBtn:hover {
+    animation: animation 6s linear infinite;
+    border: none;
+}
+
+@keyframes animation {
+    0% {background-position: 0%;}
+    100% {background-position: 300%;}
+}
+
+#clearBtn {
+    color: black;
+    background: white;
+}
+
+#newSizeBtn {
+    border: 2px solid black;
+    border-style: dashed solid;
+}
+
+#eraserBtn {
+    background-color: rgb(175, 35, 35);
+}
+
+.container {
+    aspect-ratio: 1/ 1;
+    flex: 1 0 auto;
+    display: flex;
+
+    height: auto;
+    width: 620px;
     border-top: 1px solid gray;
     border-left: 1px solid gray;
-    
+    border: 15px groove gold;
 }
 
 .row {
@@ -27,9 +105,10 @@ body {
     display: flex;
     border-right: 1px solid gray;
     border-bottom: 1px solid gray;
+    background-color: white;
     
 }
 
 .hovered {
-    background-color: black;
+    background-color: var(--box-color);
 }
