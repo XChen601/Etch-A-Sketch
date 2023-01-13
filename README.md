@@ -1,5 +1,5 @@
 # Xing's Etch-A-Sketch
-
+[Site Link](https://xchen601.github.io/Etch-A-Sketch/)
 ## Demo
 ![etch-a-sketch gif](https://github.com/XChen601/Etch-A-Sketch/blob/main/etch-a-sketch.gif)
 
