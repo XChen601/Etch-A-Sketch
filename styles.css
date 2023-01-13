@@ -129,7 +129,7 @@ body {
 }
 .footer {
     display: flex;
-    background: rgb(15, 15, 15);
+    background: #640005;
     padding: 20px 30px;
     justify-content: center;
 }
