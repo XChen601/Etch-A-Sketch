@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    flex: 1;
+    display: flex;
+    margin: 150px;
+    max-height: 500px;
+    max-width: 500px;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    
+}
+
+.row {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+.box {
+    aspect-ratio: 1/ 1;
+    flex:1;
+    display: flex;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    
+}
+
+.hovered {
+    background-color: black;
+}
