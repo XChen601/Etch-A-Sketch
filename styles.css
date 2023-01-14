@@ -37,7 +37,7 @@ body {
 }
 
 .button {
-    background-color: #48d0e2; /* Green */
+    background-color: #48d0e2;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -52,6 +52,11 @@ body {
 
 .button:hover {
     transform: scale(1.1);
+}
+
+.button:active {
+    transform: scale(1.05);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, .3);
 }
 
 #rainbowBtn {
