@@ -13,6 +13,8 @@ body {
     padding: 0;
     background: var(--background-color);
     color: var(--text-color);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .header {
@@ -28,6 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 .options {
@@ -129,13 +132,10 @@ body {
 }
 
 
-.empty-space {
-    flex:1;
-}
+
 .footer {
     display: flex;
     background: #640005;
-    margin-top: 50px;
     padding: 20px 30px;
     justify-content: center;
 }
